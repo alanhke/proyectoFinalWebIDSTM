@@ -1,0 +1,11 @@
+.mainBanner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+#mainLogo {
+    width: 15vw;
+    max-width: 120px;
+    height: auto;
+}
