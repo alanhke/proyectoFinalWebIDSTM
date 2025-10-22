@@ -1,11 +1,174 @@
+body {
+    margin: 0;
+}
+
 .mainBanner {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+    background-color: #E7F3F6;
 }
+
 #mainLogo {
     width: 15vw;
     max-width: 120px;
     height: auto;
+}
+
+.loginBanner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.loginBannerButtons {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.loginBannerButtons:hover {
+    background-color: #0D7795 !important;
+    transform: scale(1.05);
+}
+#registerButton {
+    background-color: #084F64;
+    color: white;
+}
+#loginButton {
+    background-color: #DBEDF2;
+}
+
+.langBanner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.langBanner img {
+    width: 150px;
+    height: auto;
+    max-width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+.langBanner img:hover {
+    transform: scale(1.05);
+}
+#loginButtonLangBanner {
+    background-color: #084F64;
+    display: block;
+    margin: 1rem auto;
+    color: white;
+}
+
+.infoWrapper {
+    text-align: center;
+    margin-top: 3rem;
+}
+.infoBanner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+}
+.infoColumn {
+    flex: 1;
+}
+.imgInfo {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.imgInfo img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+#infoDropdown {
+    width: 300px;
+    max-width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: #084F64;
+    display: flex;
+    justify-content: center;
+}
+.footer div {
+    display: flex;
+    gap: 2rem;
+}
+.footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+}
+
+.mainBanner,.footer {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/*Parte responsiva para movil de 768px*/
+@media (max-width: 768px) {
+    .mainBanner {
+        gap: 2px;
+    }
+    
+    .loginBanner {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .loginBannerButtons {
+        width: 80%;
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    .infoBanner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgInfo {
+        justify-content: center;
+    }
+
+    .imgInfo img {
+        max-width: 80%;
+    }
+
+    #infoDropdown {
+        width: 80%;
+    }
+
+    .footer div {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
 }
