@@ -129,46 +129,144 @@ body {
     padding: 1rem;
     box-sizing: border-box;
 }
+/*Login pagina*/
 
-/*Parte responsiva para movil de 768px*/
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.loginForm input {
+  width: 300px;
+  max-width: 80%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.loginForm h3 {
+  margin: 0.5rem 0 0;
+  color: #084F64;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo del botón de iniciar sesión */
+#login {
+  background-color: #084F64;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#login:hover {
+  background-color: #0D7795;
+  transform: scale(1.05);
+}
+
+
+
+/* --- Formularios de Login y Registro --- */
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+.loginForm h2 {
+  color: #084F64;
+  margin-bottom: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.loginForm h3 {
+  margin: 0.5rem 0 0;
+  color: #084F64;
+  font-family: Arial, sans-serif;
+}
+
+.loginForm input {
+  width: 320px;
+  max-width: 85%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Botones de login y registro */
+#login, 
+#registrar {
+  background-color: #084F64;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#login:hover, 
+#registrar:hover {
+  background-color: #0D7795;
+  transform: scale(1.05);
+}
+
+/* Apartado inferior: crear o iniciar cuenta */
+.createAccount {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #084F64;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.createAccountLink {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: #0D7795;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.createAccountLink:hover {
+  color: #062F3B;
+  text-decoration: underline;
+}
+
+/* --- Parte responsiva para móvil (máx. 768px) --- */
 @media (max-width: 768px) {
-    .mainBanner {
-        gap: 2px;
-    }
-    
-    .loginBanner {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        text-align: center;
-    }
+  .loginForm {
+    width: 90%;
+    margin: 2rem auto;
+  }
 
-    .loginBannerButtons {
-        width: 80%;
-        font-size: 1.1rem;
-        padding: 1rem;
-    }
+  .loginForm input {
+    width: 90%;
+    font-size: 1rem;
+  }
 
-    .infoBanner {
-        flex-direction: column;
-        align-items: center;
-    }
+  .loginBannerButtons {
+    width: 80%;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
 
-    .imgInfo {
-        justify-content: center;
-    }
-
-    .imgInfo img {
-        max-width: 80%;
-    }
-
-    #infoDropdown {
-        width: 80%;
-    }
-
-    .footer div {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
+  .createAccount {
+    font-size: 0.95rem;
+  }
 }
