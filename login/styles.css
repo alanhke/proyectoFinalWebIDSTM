@@ -3,7 +3,7 @@
   --space-2: 12px;
   --space-3: 16px;
   --space-4: 24px;
-  --header-h: 20vh; /* coincide con tu .logo actual */
+  --header-h: 20vh;
   --footer-h: 15vh;
 }
 
@@ -176,7 +176,7 @@ body {
 
 	.login-form input[type="email"],
   	.login-form input[type="password"] {
-    	font-size: 16px;                /* evita zoom en iOS */
+    	font-size: 16px;
     	padding: 12px 14px;
     	border-radius: 10px;
   	}
@@ -211,8 +211,8 @@ body {
   	}
 
   	:root {
-    	--header-h: 80px;     /* ~logo 64 + paddings */
-    	--footer-h: 96px;     /* footer apilado */
+    	--header-h: 80px;
+    	--footer-h: 96px;
   	}
 
   	.login-main {
@@ -220,7 +220,6 @@ body {
     	padding: var(--space-3);
   	}
 
-  	/* Formulario a todo el ancho con buen respiro */
   	.login-form { 
 		max-width: 100%; 
 		gap: var(--space-2); 
@@ -236,7 +235,7 @@ body {
 
   	.login-form input[type="email"],
   	.login-form input[type="password"] {
-    	font-size: 16px;                /* evita zoom en iOS */
+    	font-size: 16px;
     	padding: 12px 14px;
     	border-radius: 10px;
   	}
@@ -248,7 +247,6 @@ body {
     	border-radius: 10px;
   	}
 
-  	/* Footer apilado (ya tienes parte de esto, lo completamos) */
   	.footer {
     	display: flex;
     	flex-direction: column;
