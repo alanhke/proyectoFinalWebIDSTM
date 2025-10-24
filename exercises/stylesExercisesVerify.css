@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #004d60;
+    --color-secondary: #dbeff3;
+    --color-accent: #007c91;
+    --color-text: #111111;
+    --color-background: #ffffff;
+
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px 0;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+}
+
+.header h1 {
+    font-size: 2.1rem;
+    font-weight: lighter;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    color: white;
+
+}
+
+.navbarMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.navbarMenu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+.navbarMenu a:hover {
+    color: var(--color-accent);
+}
+
+.navbarProgreso {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0;
+    padding-left: 40px;
+    background-color: var(--color-background);
+    flex-wrap: wrap;
+
+
+}
+
+.navbarEstado {
+    font-size: 1.6rem;
+    background-color: var(--color-accent);
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.navbarBarra {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--color-accent);
+    padding: 13px 10px;
+    border-radius: 5px;
+}
+
+.navbarBarraPorcentaje {
+    width: 150px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbarBarraPorcentaje::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 33%;
+    background-color: var(--color-background);
+}
+
+.navbarBarraTexto {
+    font-size: 1.3rem;
+    background-color: var(--color-accent);
+}
+
+
+.ejercicio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+    text-align: center;
+    padding: 50px 15px;
+    gap: 60px;
+}
+
+.instruccion {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.pregunta {
+    background-color: #f4f8f8;
+    border-radius: 12px;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.opcion {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 8px;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+.incorrecta{
+    background-color: #C8361C;
+    color: var(--color-background);
+}
+
+.correcta{
+    background-color:  #2AC81C;
+    color: var(--color-background);
+
+}
+
+.boton {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    cursor: pointer;
+    background-color: var(--color-accent);
+
+
+}
+
+.boton a {
+    color: var(--color-background);
+    text-decoration: none;
+}
+
+
+.boton a:hover {
+    color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 0;
+    }
+
+    .navbarProgreso {
+        padding-left: 5px;
+    }
+
+    .navbarBarra {
+        margin-top: 15px;
+    }
+
+    .main-content {
+        padding: 50px;
+    }
+
+    .option {
+        font-size: 1rem;
+    }
+}

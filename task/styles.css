@@ -11,6 +11,11 @@
   	padding:0;
 }
 
+a {
+	text-decoration: none;
+	color: #084F64;
+}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
   	background-color: #ffffff;

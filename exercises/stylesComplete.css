@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #004d60;
+    --color-secondary: #dbeff3;
+    --color-accent: #007c91;
+    --color-text: #111111;
+    --color-background: #ffffff;
+
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px 0;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+}
+
+.header h1 {
+    font-size: 2.1rem;
+    font-weight: lighter;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    color: white;
+
+}
+
+.navbarMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.navbarMenu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+.navbarMenu a:hover {
+    color: var(--color-accent);
+}
+
+.navbarProgreso {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 30px 0;
+    padding-left: 180px;
+    background-color: var(--color-background);
+    flex-wrap: wrap;
+    gap: 100px;
+
+
+}
+
+.navbarEstado {
+    font-size: 1.6rem;
+    background-color: #2AC81C;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+
+
+.ejercicio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+    text-align: center;
+    padding: 50px 15px;
+    gap: 60px;
+}
+
+.boton {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    cursor: pointer;
+    background-color: var(--color-primary);
+
+
+}
+
+.boton a {
+    color: var(--color-background);
+    text-decoration: none;
+}
+
+
+.boton a:hover {
+    color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 0;
+    }
+
+    .navbarProgreso {
+        padding-left: 5px;
+    }
+   
+    .ejercicio{
+        justify-content: first baseline;
+    }
+    .ejercicio img{
+        width: 250px;
+        height: 250px;
+    }
+    .navbarEstado{
+        font-size: 1.1rem;
+    }
+    .option {
+        font-size: 1rem;
+    }
+}

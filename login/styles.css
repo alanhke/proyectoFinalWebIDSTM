@@ -17,6 +17,10 @@ body {
   	background-color: #ffffff;
   	color: #084F64;
 }
+a {
+	text-decoration: none;
+	color: white;
+}
 
 .logo{
 	height: 20vh;

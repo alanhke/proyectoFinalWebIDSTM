@@ -34,6 +34,10 @@ body {
 .loginBannerButtons:hover {
     background-color: #0D7795 !important;
     transform: scale(1.05);
+} 
+a {
+    text-decoration: none;
+    color: white;
 }
 #registerButton {
     background-color: #084F64;
@@ -42,6 +46,13 @@ body {
 #loginButton {
     background-color: #DBEDF2;
 }
+#registerButton a {
+    color: white;
+}
+#loginButton a {
+    color: #084F64;
+}
+
 
 .langBanner {
     display: flex;
@@ -129,6 +140,8 @@ body {
     padding: 1rem;
     box-sizing: border-box;
 }
+
+
 
 /*Parte responsiva para movil de 768px*/
 @media (max-width: 768px) {
