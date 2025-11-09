@@ -59,8 +59,21 @@ a {
   flex-wrap: wrap;
 }
 
-.optionButtons button,
 #createPlan {
+  background-color: #067728;
+  color: black !important;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+#createPlan a {
+  color: black;
+}
+
+.optionButtons button {
   background-color: #084F64;
   color: white;
   font-size: 1rem;
@@ -71,9 +84,11 @@ a {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.optionButtons button:hover,
-#createPlan:hover {
+.optionButtons button:hover {
   background-color: #0056b3;
+}
+#createPlan:hover {
+  background-color: #E7F3F6;
 }
 /*Parte responsiva para móviles  */
 @media (max-width: 768px) {
