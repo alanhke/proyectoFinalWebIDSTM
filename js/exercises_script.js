@@ -107,7 +107,7 @@ function nextExercise() {
   } else {
     // Finish
     alert('¡Felicidades! Has completado la lección.');
-    window.location.href = '../task/task.html';
+    window.location.href = 'task.html';
   }
 }
 

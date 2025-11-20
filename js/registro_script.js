@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('¡Registro exitoso! Bienvenido, ' + nombre);
 
             // Redirect to config page
-            window.location.href = '../config/config.html';
+            window.location.href = 'config.html';
         });
     }
 });

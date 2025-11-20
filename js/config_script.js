@@ -78,6 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('exerciseConfig', JSON.stringify(config));
 
         // Redirect to task page
-        window.location.href = '../task/task.html';
+        window.location.href = 'task.html';
     });
 });

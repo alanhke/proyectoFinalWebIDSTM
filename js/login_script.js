@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('¡Bienvenido de nuevo, ' + user.name + '!');
 
             // Redirect to Main Page to show welcome message
-            window.location.href = '../main/index.html';
+            window.location.href = 'index.html';
         });
     }
 });

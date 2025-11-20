@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (welcomeMessage) welcomeMessage.textContent = `Bienvenido, ${user.name}`;
 
         // Redirect "Empieza" to task page
-        if (startBtn) startBtn.href = '../task/task.html';
+        if (startBtn) startBtn.href = 'task.html';
 
         // Show logout button
         if (logoutBtn) logoutBtn.classList.remove('d-none');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (welcomeContainer) welcomeContainer.classList.add('d-none');
 
         // Redirect "Empieza" to registration
-        if (startBtn) startBtn.href = '../registro/registro.html';
+        if (startBtn) startBtn.href = 'registro.html';
 
         // Hide logout button
         if (logoutBtn) logoutBtn.classList.add('d-none');

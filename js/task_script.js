@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         logoutBtn.addEventListener('click', () => {
             if (confirm('¿Estás seguro de que quieres cerrar sesión?')) {
                 localStorage.removeItem('user');
-                window.location.href = '../main/index.html';
+                window.location.href = 'index.html';
             }
         });
     }
