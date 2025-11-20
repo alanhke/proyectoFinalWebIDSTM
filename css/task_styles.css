@@ -1,0 +1,144 @@
+:root {
+	--duo-dark: #084f64;
+	--duo-light: #dbedf2;
+	--duo-green: #58cc02;
+}
+
+/* Tipografía y color base */
+body {
+	margin: 0;
+	font-family: 'Nunito', sans-serif;
+	color: var(--duo-dark);
+	background-color: #fff;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.text-duo-dark {
+	color: var(--duo-dark);
+}
+
+.text-duo-primary {
+	color: var(--duo-green);
+}
+
+.bg-duo-green {
+	background-color: var(--duo-green) !important;
+}
+
+/* Header y footer con colores de marca (Igual que main) */
+.header-duo {
+	background-color: var(--duo-light);
+}
+
+.footer-duo {
+	background-color: var(--duo-dark);
+}
+
+/* Logo responsive (Igual que main) */
+.logo-duo {
+	max-height: 120px;
+}
+
+@media (max-width: 768px) {
+	.logo-duo {
+		max-height: 80px;
+	}
+}
+
+/* Navbar (Estilo Pestañas) */
+.navbar-duo {
+	background-color: #fff;
+	border-bottom: 2px solid #e5e5e5;
+}
+
+.nav-link-duo {
+	color: var(--duo-dark);
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 12px;
+	transition: all 0.2s ease;
+	letter-spacing: 0.8px;
+}
+
+.nav-link-duo:hover {
+	background-color: #f7f7f7;
+	color: var(--duo-dark);
+}
+
+.nav-link-duo.active {
+	background-color: var(--duo-light);
+	color: #1cb0f6;
+	/* Azul Duolingo para active */
+	border: 2px solid #84d8ff;
+}
+
+/* Cards */
+.lesson-card {
+	border-radius: 16px;
+	transition: transform 0.2s, box-shadow 0.2s;
+	overflow: hidden;
+}
+
+.lesson-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-media img {
+	width: 100%;
+	height: 160px;
+	object-fit: cover;
+}
+
+/* Botón principal (Igual que main) */
+.btn-duo-primary {
+	background-color: var(--duo-green);
+	border-color: var(--duo-green);
+	color: #ffffff;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	box-shadow: 0 4px 0 #46a501;
+	transition: transform 0.1s, box-shadow 0.1s;
+	border-radius: 12px;
+}
+
+.btn-duo-primary:hover,
+.btn-duo-primary:focus {
+	background-color: #58cc02;
+	border-color: #58cc02;
+	color: #ffffff;
+	transform: translateY(2px);
+	box-shadow: 0 2px 0 #46a501;
+}
+
+.btn-duo-primary:active {
+	transform: translateY(4px);
+	box-shadow: none;
+}
+
+/* Locked State */
+.lesson-card.locked {
+	opacity: 0.8;
+}
+
+.lock-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 10;
+	border-radius: 16px;
+}
+
+.lesson-card.locked .btn {
+	z-index: 11;
+	/* Para que el botón "Bloqueado" se vea sobre el overlay si se desea, o debajo */
+	position: relative;
+}

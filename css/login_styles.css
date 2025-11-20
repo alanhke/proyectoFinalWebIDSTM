@@ -1,0 +1,109 @@
+:root {
+	--duo-dark: #084f64;
+	--duo-light: #dbedf2;
+	--duo-green: #58cc02;
+}
+
+/* Tipografía y color base */
+body {
+	margin: 0;
+	font-family: 'Nunito', sans-serif;
+	color: var(--duo-dark);
+	background-color: #fff;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.text-duo-dark {
+	color: var(--duo-dark);
+}
+
+.text-duo-primary {
+	color: var(--duo-dark);
+}
+
+/* Header y footer con colores de marca (Igual que main) */
+.header-duo {
+	background-color: var(--duo-light);
+}
+
+.footer-duo {
+	background-color: var(--duo-dark);
+}
+
+/* Logo responsive (Igual que main) */
+.logo-duo {
+	max-height: 120px;
+}
+
+@media (max-width: 768px) {
+	.logo-duo {
+		max-height: 80px;
+	}
+}
+
+/* Main Container */
+.login-main {
+	flex: 1;
+	/* Para que ocupe el espacio restante y empuje el footer */
+}
+
+/* Login Card */
+.login-card {
+	width: 100%;
+	max-width: 450px;
+	border-radius: 20px;
+	background-color: #ffffff;
+}
+
+/* Inputs */
+.bg-light-input {
+	background-color: #f7f7f7;
+	border: 2px solid #e5e5e5;
+	border-radius: 12px;
+	font-weight: 600;
+	color: var(--duo-dark);
+}
+
+.bg-light-input:focus {
+	background-color: #ffffff;
+	border-color: var(--duo-light);
+	box-shadow: 0 0 0 4px rgba(219, 237, 242, 0.5);
+}
+
+/* Botón principal (Igual que main) */
+.btn-duo-primary {
+	background-color: var(--duo-green);
+	border-color: var(--duo-green);
+	color: #ffffff;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	box-shadow: 0 4px 0 #46a501;
+	transition: transform 0.1s, box-shadow 0.1s;
+	border-radius: 12px;
+}
+
+.btn-duo-primary:hover,
+.btn-duo-primary:focus {
+	background-color: #58cc02;
+	border-color: #58cc02;
+	color: #ffffff;
+	transform: translateY(2px);
+	box-shadow: 0 2px 0 #46a501;
+}
+
+.btn-duo-primary:active {
+	transform: translateY(4px);
+	box-shadow: none;
+}
+
+/* Links */
+.register-link a {
+	text-decoration: none;
+}
+
+.register-link a:hover {
+	text-decoration: underline;
+}

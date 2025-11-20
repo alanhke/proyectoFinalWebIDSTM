@@ -1,0 +1,85 @@
+:root {
+  --duo-dark: #084f64;
+  --duo-light: #dbedf2;
+  --duo-green: #58cc02;
+}
+
+/* Tipografía y color base */
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: var(--duo-dark);
+}
+
+.text-duo-green {
+  color: var(--duo-green);
+}
+
+/* Header y footer con colores de marca */
+.header-duo {
+  background-color: var(--duo-light);
+}
+
+.footer-duo {
+  background-color: var(--duo-dark);
+}
+
+/* Logo responsive con altura controlada */
+.logo-duo {
+  max-height: 120px;
+}
+
+@media (max-width: 768px) {
+  .logo-duo {
+    max-height: 80px;
+  }
+}
+
+/* Botón principal con color de marca */
+.btn-duo-primary {
+  background-color: var(--duo-green);
+  border-color: var(--duo-green);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 0 #46a501;
+  /* Sombra sólida estilo Duolingo */
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-duo-primary:hover,
+.btn-duo-primary:focus {
+  background-color: #58cc02;
+  /* Mantener color base */
+  border-color: #58cc02;
+  color: #ffffff;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #46a501;
+}
+
+.btn-duo-primary:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+/* Banderas */
+.flag-img {
+  max-width: 180px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.flag-img:hover {
+  transform: translateY(-10px) rotate(2deg);
+}
+
+/* Cards */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
