@@ -1,14 +1,13 @@
 :root {
-	--duo-dark: #084f64;
-	--duo-light: #dbedf2;
-	--duo-green: #58cc02;
+	--dark: #084f64;
+	--light: #dbedf2;
+	--green: #58cc02;
 }
 
-/* Tipografía y color base */
 body {
 	margin: 0;
 	font-family: 'Nunito', sans-serif;
-	color: var(--duo-dark);
+	color: var(--dark);
 	background-color: #fff;
 	min-height: 100vh;
 	display: flex;
@@ -16,27 +15,25 @@ body {
 }
 
 .text-duo-dark {
-	color: var(--duo-dark);
+	color: var(--dark);
 }
 
 .text-duo-primary {
-	color: var(--duo-green);
+	color: var(--green);
 }
 
 .bg-duo-green {
-	background-color: var(--duo-green) !important;
+	background-color: var(--green) !important;
 }
 
-/* Header y footer con colores de marca (Igual que main) */
 .header-duo {
-	background-color: var(--duo-light);
+	background-color: var(--light);
 }
 
 .footer-duo {
-	background-color: var(--duo-dark);
+	background-color: var(--dark);
 }
 
-/* Logo responsive (Igual que main) */
 .logo-duo {
 	max-height: 120px;
 }
@@ -47,14 +44,13 @@ body {
 	}
 }
 
-/* Navbar (Estilo Pestañas) */
 .navbar-duo {
 	background-color: #fff;
 	border-bottom: 2px solid #e5e5e5;
 }
 
 .nav-link-duo {
-	color: var(--duo-dark);
+	color: var(--dark);
 	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -66,17 +62,15 @@ body {
 
 .nav-link-duo:hover {
 	background-color: #f7f7f7;
-	color: var(--duo-dark);
+	color: var(--dark);
 }
 
 .nav-link-duo.active {
-	background-color: var(--duo-light);
+	background-color: var(--light);
 	color: #1cb0f6;
-	/* Azul Duolingo para active */
 	border: 2px solid #84d8ff;
 }
 
-/* Cards */
 .lesson-card {
 	border-radius: 16px;
 	transition: transform 0.2s, box-shadow 0.2s;
@@ -94,10 +88,9 @@ body {
 	object-fit: cover;
 }
 
-/* Botón principal (Igual que main) */
 .btn-duo-primary {
-	background-color: var(--duo-green);
-	border-color: var(--duo-green);
+	background-color: var(--green);
+	border-color: var(--green);
 	color: #ffffff;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -121,9 +114,13 @@ body {
 	box-shadow: none;
 }
 
-/* Locked State */
 .lesson-card.locked {
 	opacity: 0.8;
+}
+
+/* Ocultar lista de actividades en tarjetas bloqueadas para evitar desorden visual */
+.lesson-card.locked .card-list {
+	display: none;
 }
 
 .lock-overlay {
@@ -139,6 +136,5 @@ body {
 
 .lesson-card.locked .btn {
 	z-index: 11;
-	/* Para que el botón "Bloqueado" se vea sobre el overlay si se desea, o debajo */
 	position: relative;
 }

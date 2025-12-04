@@ -1,14 +1,13 @@
 :root {
-  --duo-dark: #084f64;
-  --duo-light: #dbedf2;
-  --duo-green: #58cc02;
+  --dark: #084f64;
+  --light: #dbedf2;
+  --green: #58cc02;
 }
 
-/* Tipografía y color base */
 body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
-  color: var(--duo-dark);
+  color: var(--dark);
   background-color: #fff;
   min-height: 100vh;
   display: flex;
@@ -16,23 +15,21 @@ body {
 }
 
 .text-duo-dark {
-  color: var(--duo-dark);
+  color: var(--dark);
 }
 
 .text-duo-primary {
-  color: var(--duo-dark);
+  color: var(--dark);
 }
 
-/* Header y footer con colores de marca (Igual que main) */
 .header-duo {
-  background-color: var(--duo-light);
+  background-color: var(--light);
 }
 
 .footer-duo {
-  background-color: var(--duo-dark);
+  background-color: var(--dark);
 }
 
-/* Logo responsive (Igual que main) */
 .logo-duo {
   max-height: 120px;
 }
@@ -43,13 +40,10 @@ body {
   }
 }
 
-/* Main Container */
 .login-main {
   flex: 1;
-  /* Para que ocupe el espacio restante y empuje el footer */
 }
 
-/* Login Card */
 .login-card {
   width: 100%;
   max-width: 450px;
@@ -57,25 +51,23 @@ body {
   background-color: #ffffff;
 }
 
-/* Inputs */
 .bg-light-input {
   background-color: #f7f7f7;
   border: 2px solid #e5e5e5;
   border-radius: 12px;
   font-weight: 600;
-  color: var(--duo-dark);
+  color: var(--dark);
 }
 
 .bg-light-input:focus {
   background-color: #ffffff;
-  border-color: var(--duo-light);
+  border-color: var(--light);
   box-shadow: 0 0 0 4px rgba(219, 237, 242, 0.5);
 }
 
-/* Botón principal (Igual que main) */
 .btn-duo-primary {
-  background-color: var(--duo-green);
-  border-color: var(--duo-green);
+  background-color: var(--green);
+  border-color: var(--green);
   color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
@@ -99,7 +91,6 @@ body {
   box-shadow: none;
 }
 
-/* Links */
 .register-link a {
   text-decoration: none;
 }

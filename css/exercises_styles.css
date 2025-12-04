@@ -1,26 +1,24 @@
-/* Variables */
 :root {
-    --duo-green: #58cc02;
-    --duo-green-dark: #46a302;
-    /* Shadow color */
-    --duo-blue: #1cb0f6;
-    --duo-dark: #3c3c3c;
-    --duo-gray: #e5e5e5;
-    --duo-light-gray: #f7f7f7;
-    --duo-red: #ff4b4b;
-    --duo-red-dark: #ea2b2b;
-    --duo-white: #ffffff;
+    --green: #58cc02;
+    --green-dark: #46a302;
+    --blue: #1cb0f6;
+    --dark: #3c3c3c;
+    --gray: #e5e5e5;
+    --light-gray: #f7f7f7;
+    --red: #ff4b4b;
+    --red-dark: #ea2b2b;
+    --white: #ffffff;
 }
 
 body {
     font-family: 'Nunito', sans-serif;
-    color: var(--duo-dark);
-    background-color: var(--duo-white);
+    color: var(--dark);
+    background-color: var(--white);
 }
 
-/* Progress Bar */
+/* Barra de progreso */
 .progress {
-    background-color: var(--duo-gray);
+    background-color: var(--gray);
     box-shadow: none;
 }
 
@@ -28,12 +26,11 @@ body {
     transition: width 0.5s ease;
 }
 
-/* Speech Bubble */
 .speech-bubble {
     position: relative;
-    background: var(--duo-white);
-    border-color: var(--duo-gray) !important;
-    color: var(--duo-dark);
+    background: var(--white);
+    border-color: var(--gray) !important;
+    color: var(--dark);
 }
 
 .speech-bubble::before {
@@ -44,9 +41,8 @@ body {
     transform: translateY(-50%);
     border-style: solid;
     border-width: 10px 10px 10px 0;
-    border-color: transparent var(--duo-gray) transparent transparent;
+    border-color: transparent var(--gray) transparent transparent;
     display: none;
-    /* Hidden on mobile */
 }
 
 @media (min-width: 576px) {
@@ -62,11 +58,11 @@ body {
         transform: translateY(-50%);
         border-style: solid;
         border-width: 9px 9px 9px 0;
-        border-color: transparent var(--duo-white) transparent transparent;
+        border-color: transparent var(--white) transparent transparent;
     }
 }
 
-/* Options Grid */
+/* Grid de opciones */
 .options-grid {
     grid-template-columns: 1fr;
 }
@@ -77,20 +73,20 @@ body {
     }
 }
 
-/* Option Buttons */
+/* Botones de opción */
 .btn-outline-secondary {
-    color: var(--duo-dark);
-    border-color: var(--duo-gray);
+    color: var(--dark);
+    border-color: var(--gray);
     border-width: 2px;
     border-bottom-width: 4px;
-    background-color: var(--duo-white);
+    background-color: var(--white);
     transition: all 0.1s;
 }
 
 .btn-outline-secondary:hover {
-    background-color: var(--duo-light-gray);
-    border-color: var(--duo-gray);
-    color: var(--duo-dark);
+    background-color: var(--light-gray);
+    border-color: var(--gray);
+    color: var(--dark);
     transform: translateY(1px);
     border-bottom-width: 3px;
 }
@@ -106,11 +102,11 @@ body {
     color: #1899d6;
 }
 
-/* Primary Button (Green) */
+/* Botón Primario (Verde) */
 .btn-duo-primary {
-    background-color: var(--duo-green);
+    background-color: var(--green);
     border: none;
-    border-bottom: 4px solid var(--duo-green-dark);
+    border-bottom: 4px solid var(--green-dark);
     color: white;
     transition: all 0.1s;
 }
@@ -128,14 +124,13 @@ body {
 }
 
 .btn-duo-primary:disabled {
-    background-color: var(--duo-gray);
+    background-color: var(--gray);
     border-bottom-color: #ccc;
     color: #afafaf;
     transform: none;
     border-bottom-width: 4px;
 }
 
-/* Feedback Styles */
 .footer-correct {
     background-color: #d7ffb8 !important;
     border-top-color: #b8f28b !important;
@@ -147,9 +142,9 @@ body {
 }
 
 .text-incorrect {
-    color: var(--duo-red-dark) !important;
+    color: var(--red-dark) !important;
 }
 
 .bg-incorrect {
-    background-color: var(--duo-red) !important;
+    background-color: var(--red) !important;
 }

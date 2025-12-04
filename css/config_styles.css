@@ -1,17 +1,16 @@
-/* Variables */
 :root {
-  --duo-green: #58cc02;
-  --duo-green-dark: #46a302;
-  --duo-blue: #1cb0f6;
-  --duo-dark: #3c3c3c;
-  --duo-gray: #e5e5e5;
-  --duo-light-gray: #f7f7f7;
-  --duo-white: #ffffff;
+  --green: #58cc02;
+  --green-dark: #46a302;
+  --blue: #1cb0f6;
+  --dark: #3c3c3c;
+  --gray: #e5e5e5;
+  --light-gray: #f7f7f7;
+  --white: #ffffff;
 }
 
 body {
   font-family: 'Nunito', sans-serif;
-  color: var(--duo-dark);
+  color: var(--dark);
 }
 
 /* Header */
@@ -25,7 +24,7 @@ body {
 
 .btn-close-custom:hover {
   transform: scale(1.1);
-  color: var(--duo-dark) !important;
+  color: var(--dark) !important;
 }
 
 /* Cards */
@@ -38,22 +37,22 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
   cursor: pointer;
-  border: 2px solid var(--duo-blue) !important;
+  border: 2px solid var(--blue) !important;
   background-color: #ddf4ff;
 }
 
-/* Buttons */
+/* Botones */
 .btn-outline-duo {
-  color: var(--duo-dark);
-  border: 2px solid var(--duo-gray);
+  color: var(--dark);
+  border: 2px solid var(--gray);
   border-bottom-width: 4px;
-  background-color: var(--duo-white);
+  background-color: var(--white);
   transition: all 0.1s;
 }
 
 .btn-outline-duo:hover {
-  background-color: var(--duo-light-gray);
-  border-color: var(--duo-gray);
+  background-color: var(--light-gray);
+  border-color: var(--gray);
   transform: translateY(1px);
   border-bottom-width: 3px;
 }
@@ -69,11 +68,11 @@ body {
   color: #1899d6;
 }
 
-/* Primary Button (Green) */
+/* Botón Primario */
 .btn-duo-primary {
-  background-color: var(--duo-green);
+  background-color: var(--green);
   border: none;
-  border-bottom: 4px solid var(--duo-green-dark);
+  border-bottom: 4px solid var(--green-dark);
   color: white;
   transition: all 0.1s;
 }

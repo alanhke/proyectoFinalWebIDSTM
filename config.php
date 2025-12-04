@@ -1,0 +1,120 @@
+<?php
+session_set_cookie_params(0, '/');
+session_start();
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION['user'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración - Duolingo Premium</title>
+  <link rel="icon" href="img/logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/config_styles.css">
+</head>
+
+<body class="bg-light">
+
+  <!-- Header -->
+  <header class="header-duo py-3 border-bottom bg-white">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <img src="img/logo.png" alt="Duolingo Logo" style="height: 40px;">
+        <h1 class="h4 fw-bold text-duo-green mb-0 d-none d-sm-block">Duolingo Premium</h1>
+      </div>
+      <a href="task.php" class="btn-close-custom text-muted fs-4">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container py-5" style="max-width: 800px;">
+
+    <h2 class="text-center fw-bold text-duo-dark mb-5">Configura tu aprendizaje</h2>
+
+    <!-- Sección de Idioma -->
+    <section class="mb-5">
+      <h3 class="h5 fw-bold text-muted mb-3 text-uppercase">Selecciona un idioma</h3>
+      <div class="row g-3 justify-content-center">
+        <div class="col-4 col-sm-3">
+          <div class="card h-100 border-0 shadow-sm card-hover text-center p-3 lang-card" data-lang="es">
+            <img src="img/banderaEspaña.png" alt="Español" class="img-fluid rounded mb-2" style="max-height: auto;">
+            <p class="fw-bold text-duo-dark mb-0 small">Español</p>
+          </div>
+        </div>
+        <div class="col-4 col-sm-3">
+          <div class="card h-100 border-0 shadow-sm card-hover text-center p-3 lang-card" data-lang="en">
+            <img src="img/banderaInglaterra.png" alt="Inglés" class="img-fluid rounded mb-2" style="max-height: auto;">
+            <p class="fw-bold text-duo-dark mb-0 small">Inglés</p>
+          </div>
+        </div>
+        <div class="col-4 col-sm-3">
+          <div class="card h-100 border-0 shadow-sm card-hover text-center p-3 lang-card" data-lang="fr">
+            <img src="img/banderaFrancia.png" alt="Francés" class="img-fluid rounded mb-2" style="max-height: auto;">
+            <p class="fw-bold text-duo-dark mb-0 small">Francés</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Nivel -->
+    <section class="mb-5">
+      <h3 class="h5 fw-bold text-muted mb-3 text-uppercase">Nivel actual</h3>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <button class="btn btn-outline-duo btn-lg rounded-4 fw-bold flex-grow-1 level-btn"
+          data-level="beginner">Principiante</button>
+        <button class="btn btn-outline-duo btn-lg rounded-4 fw-bold flex-grow-1 level-btn"
+          data-level="intermediate">Intermedio</button>
+        <button class="btn btn-outline-duo btn-lg rounded-4 fw-bold flex-grow-1 level-btn"
+          data-level="advanced">Avanzado</button>
+      </div>
+    </section>
+
+    <!-- Sección de Uso -->
+    <section class="mb-5">
+      <h3 class="h5 fw-bold text-muted mb-3 text-uppercase">Motivo de aprendizaje</h3>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <button class="btn btn-outline-duo btn-lg rounded-4 fw-bold flex-grow-1 topic-btn" data-topic="work">
+          <i class="fa-solid fa-briefcase me-2"></i>Trabajo
+        </button>
+        <button class="btn btn-outline-duo btn-lg rounded-4 fw-bold flex-grow-1 topic-btn" data-topic="tourism">
+          <i class="fa-solid fa-plane me-2"></i>Turismo
+        </button>
+        <button class="btn btn-outline-duo btn-lg rounded-4 fw-bold flex-grow-1 topic-btn" data-topic="grammar">
+          <i class="fa-solid fa-book me-2"></i>Gramática
+        </button>
+      </div>
+    </section>
+
+    <!-- Botón Guardar -->
+    <div class="text-center mt-5">
+      <button id="save-config-btn"
+        class="btn btn-duo-primary btn-lg rounded-4 px-5 py-3 fw-bold text-uppercase w-100 w-sm-auto">
+        Guardar cambios
+      </button>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/config_script.js"></script>
+</body>
+
+</html>
